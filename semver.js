@@ -48,10 +48,6 @@ function getSemverIncrement(prs) {
       if (weight && weight < result) {
         result = weight;
       }
-    } else {
-      throw new Error(
-        `Pull request title did not contain a valid Semver label: #${pr.id} ${pr.title}`
-      );
     }
   }
   return result;
